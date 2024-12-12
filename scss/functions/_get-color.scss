@@ -14,18 +14,19 @@
   @return map.get(map.get($colors, $type), $level);
   } @else {
 
-    @if not map.has-key($colors, $type) {
-      @warn "Invalid color type: #{$type}";
-    }
+    // @if not map.has-key($colors, $type) {
+      @warn "Invalid color or type";
+    
 
 
 
-    @if map.has-key($colors, $type) and not map.has-key(map.get($colors, $type), $level) {
-    @warn "Invalid level: #{$level} for #{$type}";
-    }
+    // @if map.has-key($colors, $type) and not map.has-key(map.get($colors, $type), $level) {
+    // @warn "Invalid level: #{$level} for #{$type}";
+    // }
 
 
 
     @return null;
   }
+
 }
